@@ -1,0 +1,74 @@
+<section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <img src="assets\img\log.png" routerLink="/login" class="xx"> <br> <br> <br> <br> 
+
+                  <h3 class="mb-5 text-uppercase">UNITECK registration</h3>
+                  <div class="alert alert-{{ emailsent ? 'success' : 'danger' }}" role="alert" *ngIf="emailsent !== null">
+                    {{ emailsent ? 'register sent successfully!' : 'Error sending register. Please try again later.' }}
+                  </div>
+                  <form [formGroup]="userForm">
+                  <div class="form-outline mb-4">
+  
+  
+        </div>
+  
+                  <div class="form-outline mb-4">
+                    <div class="sec-2">
+                      <input type="text" id="fullname" formControlName="fullname" class="form-control" required placeholder="Enter your full name" />
+                    </div>
+                    <div *ngIf="userForm.get('fullname')?.invalid && userForm.get('fullname')?.touched" class="text-danger">
+                      Full name is required.
+                    </div>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <div class="sec-2">
+                      <input type="text" id="email" formControlName="email" class="form-control" required placeholder="Enter your email" />
+                    </div>
+                    <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="text-danger">
+                      Email is required.
+                    </div>
+                  </div>
+  
+  
+                    <div class="form-outline mb-4">
+                      <div class="sec-2">
+                        <input class="pas" type="password" formControlName="password"  class="form-control" placeholder="Enter your password" />
+                      </div>
+                      <div *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched" class="text-danger">
+                        Password is required.
+                      </div>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <div class="sec-2">
+                      <input type="text" id="mobilenumber" formControlName="mobilenumber"  class="form-control" placeholder="Enter your mobile number" />
+                    </div>
+                    <div *ngIf="userForm.get('mobilenumber')?.invalid && userForm.get('mobilenumber')?.touched" class="text-danger">
+                      Mobile number is required.
+                    </div>
+                  </div>
+  <br><br><br> <br>
+                  <div class="d-flex justify-content-end pt-3">
+                    <button type="button" class="btn btn-warning btn-lg ms-2" (click)="userSubmit()">Register</button>
+                  </div>
+  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

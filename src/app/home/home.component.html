@@ -1,0 +1,191 @@
+<app-navbar></app-navbar>
+<div class="main-banner">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container-fluid">
+                <div class="main-banner-content">
+                    <h1>{{ 'main_banner.title' | translate }}</h1>
+                    <p>{{ 'main_banner.paragraph' | translate }}</p>
+                    <div class="btn-box">
+                        <a href="#" class="optional-btn" (click)="showWelcomeMessage()">{{ 'main_banner.get_started_btn' | translate }}</a>
+                    </div>
+                    <div *ngIf="showWelcome" class="welcome-container">
+                        <div class="welcome-message">
+                            <h1>UNITECK WELCOMES YOU</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="featured-services-area">
+    <div class="container">
+        <div class="featured-services-inner">
+            <div class="row m-0">
+                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
+                    <div class="single-featured-services-box">
+                        <div class="icon">
+                            <i class="flaticon-robot"></i>
+                        </div>
+
+                        <h2><b>{{ 'home.t' | translate }}</b></h2>               
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
+                    <div class="single-featured-services-box">
+                        <div class="icon">
+                            <i class="flaticon-artificial-intelligence"></i>
+                        </div>
+
+                        <h2><b>{{ 'home.d' | translate }}</b></h2>               
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 p-0">
+                    <div class="single-featured-services-box">
+                        <div class="icon">
+                            <i class="flaticon-machine-learning"></i>
+                        </div>
+
+                        <h2><B>{{ 'home.r' | translate }}</B></h2>               
+     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Featured Services Area -->
+
+<!-- Start About Area -->
+<section class="about-area ptb-110">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="about-content">
+                    <h2>{{'home.p'|translate}}</h2>
+                    <p>"{{'home.x'|translate}}"</p>
+    
+    
+                    <a href="https://www.youtube.com/watch?v=BU0HuZLGSuU&t=10s" class="btn btn-primary">{{"buttons.discover"|translate}}</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-12">
+                <div class="about-image">
+                    <img src="assets/img/about/1.png" alt="image">
+                    <img src="assets/img/about/2.png" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shape-img1"><img src="assets/img/shape/1.png" alt="image"></div>
+    <div class="shape-img2"><img src="assets/img/shape/2.svg" alt="image"></div>
+    <div class="shape-img3"><img src="assets/img/shape/3.png" alt="image"></div>
+    <div class="shape-img4"><img src="assets/img/shape/4.svg" alt="image"></div>
+    <div class="shape-img5"><img src="assets/img/shape/5.svg" alt="image"></div>
+    <div class="shape-img6"><img src="assets/img/shape/6.png" alt="image"></div>
+    <div class="dot-shape1"><img src="assets/img/shape/dot1.png" alt="image"></div>
+    <div class="dot-shape2"><img src="assets/img/shape/dot3.png" alt="image"></div>
+</section>
+
+<section class="services-area bg-f2f6f9 ptb-110">
+    <div class="container">
+        <div class="section-title">
+            <h2> {{"home.title"|translate}}</h2>
+            <p></p>
+        </div>
+
+        <div class="row">
+            
+            <div class="col-lg-4 col-md-6 col-sm-6">
+           
+                <div class="single-services-box">
+                    <h3>{{'home.z1'|translate}}</h3><br>
+                    <div class="icon">
+                        
+                        <i class="flaticon-income"></i>
+                        
+                    </div>
+
+           
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6" >
+                <div class="single-services-box">
+                    <h3>{{'home.z2'|translate}}</h3><br>
+                    
+                    <div class="icon">
+                        <i class="flaticon-automatic"></i>
+                    </div>
+
+                  
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-services-box">
+                    <h3>{{'home.z3'|translate}}</h3><br>
+                    <div class="icon">
+                        <i class="flaticon-locked"></i>
+                    </div>
+
+                
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-services-box">
+                    <h3>{{'home.z4'|translate}}</h3><br>
+                    <div class="icon">
+                        <i class="flaticon-molecular"></i>
+                    </div>
+
+       
+                </div>
+               
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-services-box">
+                    <h3>{{'home.z5'|translate}}</h3><br>
+                    <div class="icon">
+                        <i class="flaticon-gear"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-services-box">
+                    <h3>{{'home.z6'|translate}}</h3><br>
+                    <div class="icon">
+                        <i class="flaticon-ceo"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shape-img2"><img src="assets/img/shape/2.svg" alt="image"></div>
+    
+    <div class="shape-img3"><img src="assets/img/shape/3.png" alt="image"></div>
+    <div class="shape-img4"><img src="assets/img/shape/4.svg" alt="image"></div>
+    <div class="shape-img5"><img src="assets/img/shape/5.svg" alt="image"></div>
+    <div class="shape-img7"><img src="assets/img/shape/3.png" alt="image"></div>
+    <div class="dot-shape1"><img src="assets/img/shape/dot1.png" alt="image"></div>
+    <div class="dot-shape2"><img src="assets/img/shape/dot3.png" alt="image"></div>
+    <div class="dot-shape4"><img src="assets/img/shape/dot4.png" alt="image"></div>
+    <div class="dot-shape5"><img src="assets/img/shape/dot5.png" alt="image"></div>
+    <div class="dot-shape6"><img src="assets/img/shape/dot6.png" alt="image"></div>
+</section>
+<br>
+<br>
+
+
+
+<app-footer></app-footer>

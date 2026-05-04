@@ -1,0 +1,183 @@
+<app-navbar> </app-navbar>
+<!-- Start Page Title Area -->
+<div class="page-title-area item-bg3">
+  <div class="container">
+    <div class="page-title-content">
+      <h2>{{ "navbar.contact" | translate }}</h2>
+      <ul>
+        <li>
+          <a href="#">{{ "navbar.home" | translate }}</a>
+        </li>
+        <li>{{ "navbar.contact" | translate }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</div>
+<!-- End Page Title Area -->
+
+<!-- Start Contact Area -->
+<section class="contact-area ptb-110">
+  <div class="container">
+    <div class="section-title">
+      <span>{{ "contact.msg" | translate }}</span>
+      <h2>{{ "contact.drop" | translate }}</h2>
+    </div>
+
+    <div class="contact-form">
+      <div class="row align-items-center">
+        <div class="col-lg-5 col-md-12">
+          <div class="contact-image">
+            <img src="assets/img/23.png" alt="image" />
+          </div>
+        </div>
+
+        <div class="col-lg-7 col-md-12">
+          <div
+            class="alert alert-{{ emailSent ? 'success' : 'danger' }}"
+            role="alert"
+            *ngIf="emailSent !== null"
+          >
+            {{
+              emailSent
+                ? "Email sent successfully!"
+                : "Error sending email. Please try again later."
+            }}
+          </div>
+          <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    formControlName="name"
+                    class="form-control"
+                    required
+                    data-error="Please enter your name"
+                    placeholder="{{ 'contact.name' | translate }}"
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                  <input
+                    type="email"
+                    formControlName="email"
+                    class="form-control"
+                    required
+                    data-error="Please enter your email"
+                    placeholder="{{ 'contact.email' | translate }}"
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    formControlName="phone"
+                    class="form-control"
+                    required
+                    data-error="Please enter your number"
+                    placeholder="{{ 'contact.phone' | translate }}"
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    formControlName="subject"
+                    class="form-control"
+                    required
+                    data-error="Please enter your subject"
+                    placeholder="{{ 'contact.subject' | translate }}"
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+
+              <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                  <textarea
+                    formControlName="message"
+                    class="form-control"
+                    id="message"
+                    cols="30"
+                    rows="5"
+                    required
+                    data-error="Write your message"
+                    placeholder="{{ 'contact.mssg' | translate }}"
+                  ></textarea>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+
+              <div class="col-lg-12 col-md-12">
+                <button type="submit" class="btn btn-primary">
+                  {{ "buttons.send" | translate }}
+                </button>
+                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-info">
+      <div class="contact-info-content">
+        <h3>{{ "contact.con" | translate }}</h3>
+        <h2>
+          <a href="tel:+0881306298615">+216 24 871 233</a>
+          <span>{{ "contact.or" | translate }}</span>
+          <a href="mailto:unitechmourouj@gmail.com">unitechmourouj@gmail.com</a
+          ><BR />
+          <a href="mailto:drkshdw789@gmail.com">drkshdw789@gmail.com</a>
+        </h2>
+
+        <ul class="social">
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=5SIhlWFAJWk"
+              target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=100092532861072"
+              target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="shape-img1"><img src="assets/img/shape/1.png" alt="image" /></div>
+  <div class="shape-img2"><img src="assets/img/shape/2.svg" alt="image" /></div>
+  <div class="shape-img3"><img src="assets/img/shape/3.png" alt="image" /></div>
+  <div class="shape-img4"><img src="assets/img/shape/4.svg" alt="image" /></div>
+  <div class="shape-img5"><img src="assets/img/shape/5.svg" alt="image" /></div>
+  <div class="shape-img6"><img src="assets/img/shape/6.png" alt="image" /></div>
+  <div class="dot-shape1">
+    <img src="assets/img/shape/dot1.png" alt="image" />
+  </div>
+  <div class="dot-shape2">
+    <img src="assets/img/shape/dot3.png" alt="image" />
+  </div>
+</section>
+<app-footer></app-footer>

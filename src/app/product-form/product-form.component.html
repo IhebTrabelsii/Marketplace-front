@@ -1,0 +1,42 @@
+<div class="form-holder">
+  <div class="form-content">
+    <div class="form-items">
+   
+
+      <h3>Send Request</h3>
+      <p>Fill in the data below.</p>
+      <form [formGroup]="cartData" (ngSubmit)="addToCart()" class="requires-validation" novalidate>
+
+        <div class="col-md-12">
+          <input class="form-control" type="text" name="name" placeholder="Full Name" required formControlName="name">
+          <div class="valid-feedback">Username field is valid!</div>
+          <div class="invalid-feedback">Username field cannot be blank!</div>
+        </div>
+        <div class="col-md-12">
+          <input class="form-control" type="email" name="email" placeholder="E-mail Address" required formControlName="Email">
+          <div class="valid-feedback">Email field is valid!</div>
+          <div class="invalid-feedback">Email field cannot be blank!</div>
+        </div>
+        <div class="col-md-12">
+          <input class="form-control" type="adress" name="address" placeholder="Address" required formControlName="address">
+          <div class="valid-feedback">adress field is valid!</div>
+          <div class="invalid-feedback">adress field cannot be blank!</div>
+        </div>
+        <div class="col-md-12">
+          <input class="form-control" type="number" name="number" placeholder="Phone_number" required formControlName="number">
+          <div class="valid-feedback">number field is valid!</div>
+          <div class="invalid-feedback">number field cannot be blank!</div>
+        </div>
+        <div class="col-md-12">
+          <input class="form-control" type="text" name="price" placeholder="Quantity" required formControlName="price">
+          <div class="valid-feedback">Username field is valid!</div>
+          <div class="invalid-feedback">Username field cannot be blank!</div>
+        </div>
+        
+        <div class="form-button mt-3">
+          <button id="submit" type="submit" class="btn btn-primary">Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

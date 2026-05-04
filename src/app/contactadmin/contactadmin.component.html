@@ -1,0 +1,192 @@
+<app-navadmin></app-navadmin>
+<app-sideadmin></app-sideadmin>
+<body class="home">
+    <div class="container-fluid display-table">
+        <div class="row display-table-row">
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+                <div class="logo">
+                    <a hef="home.html"><img src="https://ibb.co/2Pq8hz6" alt="white-logo1" class="hidden-xs hidden-sm">
+                        <img src="https://ibb.co/2Pq8hz6" alt="white-logo1" class="visible-xs visible-sm circle-logo">
+                    </a>
+                </div>
+              
+            </div>
+            <div class="col-md-10 col-sm-11 display-table-cell v-align">
+                <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+                <div class="user-dashboard">
+                    <div class="row">
+                      
+                    
+                        <div class="container-fluid">
+                            <div class="row">
+                              <!-- Sidebar -->
+                              <div class="col-md-2">
+                               
+                              </div>
+                              <!-- Main Content -->
+                              <div class="col-md-10">
+                                
+                                <style>
+                                    /* Style for the table */
+                                    .styled-table {
+                                      
+                                      margin-top: 150px;
+                                      margin-left:-60px;
+                                      width: 100%;
+                                      border-collapse: collapse;
+                                      border-radius: 8px;
+                                      overflow: hidden;
+                                      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                    }
+                                  
+                                    .styled-table thead th {
+                                      background-color: #2f2f2f;
+                                      color: #fff;
+                                      font-weight: bold;
+                                      text-align: left;
+                                      padding: 12px;
+                                      border: 1px solid #dee2e6;
+                                    }
+                                  
+                                    .styled-table tbody td {
+                                      padding: 12px;
+                                      border: 1px solid #dee2e6;
+                                    }
+                                  
+                                    .styled-table tbody td input {
+                                      width: 100%;
+                                      border: none;
+                                      padding: 6px 10px;
+                                      border-radius: 4px;
+                                      box-sizing: border-box;
+                                    }
+                                  
+                                    .styled-table tbody td button {
+                                      padding: 6px 12px;
+                                      border: none;
+                                      border-radius: 4px;
+                                      background-color: #2f2f2f;
+                                      color: #fff;
+                                      cursor: pointer;
+                                    }
+                                  
+                                    .styled-table tbody td button:hover {
+                                      background-color: #0d1f55;
+                                    }
+                                  
+                                    /* Style for alternate rows */
+                                    .styled-table tbody tr:nth-child(even) {
+                                      background-color: #f8f9fa;
+                                    }
+                                  </style>
+                                  
+                                  <table class="styled-table">
+                                    <thead>
+                                      <tr>
+                                        <th>id</th>
+                                        <th>name</th>
+                                        <th>email</th>
+                                        <th>phone</th>
+                                        <th>subject</th>
+                                        <th>message</th>
+                                        <th></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr *ngFor="let user of users">
+                                        <td>{{ user.id }}</td>
+                                        <td>
+                                          <input type="text" [(ngModel)]="user.name" [disabled]="!user.editMode" />
+                                        </td>
+                                        <td>
+                                          <input type="email" [(ngModel)]="user.email" [disabled]="!user.editMode" />
+                                        </td>
+                                        <td>
+                                          <input type="tel" [(ngModel)]="user.phone" [disabled]="!user.editMode" />
+                                        </td>
+                                        <td>
+                                          <input type="text" [(ngModel)]="user.subject" [disabled]="!user.editMode" />
+                                        </td>
+                                        <td>
+                                          <input type="text" [(ngModel)]="user.message" [disabled]="!user.editMode" />
+                                        </td>
+                                        <td>
+                                          <button (click)="toggleEditMode(user)">edit</button>
+                                        </td>
+                                        <td>
+                                          <button (click)="toggledropMode(user.id)">Delete</button>
+                                        </td>
+                                        <td>
+                                          
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div *ngFor="let contact of users" class="x">
+                                    <div *ngIf="contact.editMode" class="edit-form">
+                                     
+                                      <div class="form-group">
+                                        <label>Name:</label>
+                                        <input [(ngModel)]="contact.name" class="form-control">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Email:</label>
+                                        <input [(ngModel)]="contact.email" class="form-control">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Number:</label>
+                                        <input [(ngModel)]="contact.phone" class="form-control">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Subject:</label>
+                                        <input [(ngModel)]="contact.subject" class="form-control">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Message</label>
+                                        <input [(ngModel)]="contact.message" class="form-control">
+                                      </div>
+                                    
+                                     
+                                      
+                                      <button class="edit-button" (click)="updateuser(contact.id)">Edit</button>
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Modal -->
+    <div id="add_project" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header login-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Add Project</h4>
+                </div>
+                <div class="modal-body">
+                            <input type="text" placeholder="Project Title" name="name">
+                            <input type="text" placeholder="Post of Post" name="mail">
+                            <input type="text" placeholder="Author" name="passsword">
+                            <textarea placeholder="Desicrption"></textarea>
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="cancel" data-dismiss="modal">Close</button>
+                    <button type="button" class="add-project" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

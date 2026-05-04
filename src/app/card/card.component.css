@@ -1,0 +1,100 @@
+/* Table Styles */
+.custom-table {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    width: 100%;
+  }
+  
+  .custom-table thead th {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .custom-table tbody td {
+    padding: 0.75rem; /* Adjusted for slightly more space */
+    background-color: #ffffff;
+    border-bottom: 8px solid #f8f9fa; /* Maintain spacing between rows */
+  }
+  
+  .custom-table tr {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow for subtlety */
+  }
+  
+  /* Button Styles - Enhanced for better UI consistency */
+  .btn {
+    margin: 4px; /* Adjusted for consistent spacing */
+    border: none; /* Removes border for a cleaner look */
+    color: #ffffff; /* Ensures text is always white for readability */
+    padding: 0.375rem 0.75rem; /* Ensures buttons have a consistent size */
+    font-size: 0.9rem; /* Adjusts font size for better readability */
+    transition: background-color 0.15s ease-in-out; /* Smooth transition for hover effects */
+  }
+  
+  .btn-danger, .btn-primary, .btn-success, .btn-secondary {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
+  }
+  
+  /* Specific button hover styles moved to use a lighter approach for interaction */
+  .btn:hover {
+    opacity: 0.85;
+  }
+  
+  /* Edit Form Styles */
+  .edit-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    margin-top: 20px; /* Adds space above the form for better separation */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-weight: 600; /* Makes labels slightly bolder for emphasis */
+  }
+  
+  /* Additional Styles for Visual Consistency */
+  .form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Lines and Decorative Elements */
+  .lines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .line {
+    width: 30px;
+    height: 2px;
+    background-color: #ff3300;
+  }
+  .btn-admin-move {
+    display: block; /* Centers the button */
+    width: 50%; /* Adjust based on preference */
+    margin: 20px auto; /* Top and bottom margin with auto horizontally centers the button */
+    padding: 10px 0; /* Increased padding for a larger button */
+    font-size: 1.25rem; /* Larger font size */
+    border-radius: 0.5rem; /* Optional: Rounds the corners a bit more */
+    font-family: 'poppins', sans-serif;
+  }
+  
+  /* If the button still inherits the .btn-primary styles, ensure no conflicts */
+  .btn-primary.btn-admin-move {
+    background-color: #ff3700; /* Or any specific color you prefer */
+    border-color: #ff4000; /* Consistent with background for a unified look */
+  }
+  

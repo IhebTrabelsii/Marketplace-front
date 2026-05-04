@@ -1,0 +1,92 @@
+<app-navbar></app-navbar>
+<!-- Start Page Title Area -->
+<div class="page-title-area item-bg2">
+  <div class="container">
+    <div class="page-title-content">
+      <h2>{{ "navbar.card" | translate }}</h2>
+      <ul>
+        <li>
+          <a href="#">{{ "navbar.home" | translate }}</a>
+        </li>
+        <li>{{ "navbar.card" | translate }}</li>
+      </ul>
+    </div>
+
+    <div class="lines">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+  <table class="table custom-table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">{{ "card.name" | translate }}</th>
+        <th scope="col">{{ "card.Quantity" | translate }}</th>
+        <th scope="col">{{ "card.adress" | translate }}</th>
+        <th scope="col">{{ "card.email" | translate }}</th>
+        <th scope="col">{{ "card.number" | translate }}</th>
+        <th scope="col">{{ "card.action" | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.address }} {{ product.lastName }}</td>
+        <td>{{ product.email }}</td>
+        <td>{{ product.number }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteProduct(product.id)">
+            {{ "card.delete" | translate }}
+          </button>
+          <button class="btn btn-primary" (click)="toggleEditMode(product.id)">
+            {{ "card.edit" | translate }}
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngFor="let product of products">
+    <div *ngIf="product.editMode" class="edit-form">
+      <div class="form-group">
+        <label>Name:</label>
+        <input [(ngModel)]="product.name" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label>Quantity:</label>
+        <input [(ngModel)]="product.price" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label>Address:</label>
+        <input [(ngModel)]="product.address" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label>Number:</label>
+        <input [(ngModel)]="product.number" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input [(ngModel)]="product.email" class="form-control" />
+      </div>
+      <button class="btn btn-success" (click)="updateProduct(product)">
+        {{ "card.save" | translate }}
+      </button>
+      <button class="btn btn-secondary" (click)="toggleEditMode(product.id)">
+        {{ "card.cancel" | translate }}
+      </button>
+    </div>
+  </div>
+  <button class="btn btn-primary btn-admin-move" (click)="moveToAdminProduct()">
+    {{ "card.command" | translate }}
+  </button>
+
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

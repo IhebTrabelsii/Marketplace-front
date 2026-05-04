@@ -1,0 +1,134 @@
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+.form-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  .form-content {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+  }
+  
+  .form-items {
+    font-family: poppins;
+    border: 3px solid #fff;
+    padding: 40px;
+    display: inline-block;
+    min-width: 540px;
+    border-radius: 10px;
+    text-align: left;
+    transition: all 0.4s ease;
+    background-color: rgba(255, 255, 255, 1); 
+  }
+  
+  
+  .form-items h3 {
+    color: #fff;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .form-items p {
+    color: #fff;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .form-items label,
+  .was-validated .form-check-input:invalid~.form-check-label,
+  .was-validated .form-check-input:valid~.form-check-label {
+    color: #fff;
+  }
+  
+  .form-items input[type=text],
+  .form-items input[type=password],
+  .form-items input[type=email],
+  .form-items select {
+    width: 100%;
+    padding: 9px 20px;
+    text-align: left;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000000;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+  }
+  
+  .btn-primary {
+    background-color: #000000;
+    outline: none;
+    border: 0px;
+    box-shadow: none;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active {
+    background-color: #000000;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+  }
+  
+  .form-items textarea {
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-align: left;
+    background-color: #fff;
+    border: 1;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8d8d8d;
+    outline: none;
+    resize: none;
+    height: 120px;
+    transition: 100%;
+    margin-bottom: 14px;
+  }
+  
+  .form-items textarea:hover,
+  .form-items textarea:focus {
+    border: 1;
+    background-color: #ebeff8;
+    color: black;
+  }
+  
+  .mv-up {
+    margin-top: -9px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .invalid-feedback {
+    color: #ff606e;
+  }
+  
+  .valid-feedback {
+    color: #2acc80;
+  }

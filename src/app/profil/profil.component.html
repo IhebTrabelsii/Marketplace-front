@@ -1,0 +1,132 @@
+
+<router-outlet></router-outlet>
+<app-navbar></app-navbar>
+
+<div class="page-title-area item-bg3">
+    <div class="container">
+      <div class="page-title-content">
+        <h2>Profil</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>Profil</li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="lines">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+  <!-- End Page Title Area -->
+  
+  <!-- Start Contact Area -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootstrap snippets bootdey">
+<div class="row">
+  <div class="profile-nav col-md-3">
+      <div class="panel">
+          <div class="user-heading round">
+            <form>
+                <input type="file" accept="image/*" id="profile-picture-input" style="display: none;" (change)="onFileSelected($event)">
+                <label for="profile-picture-input" style="cursor: pointer;"><i class="fa fa-camera"></i> Upload Profile Picture</label>
+                <div *ngIf="imageUrl">
+                  <img [src]="imageUrl" alt="Uploaded Image">
+                </div>
+                
+          </form>
+          
+
+              <h1>Iheb Trabelsi</h1>
+              <p>iheb.trabelsi.ai@gmail.com</p>
+          </div>
+
+          <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#"> <i class="fa fa-user"></i> Profile</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="profile-info col-md-9">
+      <div class="panel">
+         
+          <div class="panel-body bio-graph-info">
+              <h1>Bio Graph</h1>
+              <div class="row">
+                  <div class="bio-row">
+                      <p><span>First Name </span>: Iheb</p>
+                  </div>
+                  <div class="bio-row">
+                      <p><span>Last Name </span>: Trabelsi</p>
+                  </div>
+                  <div class="bio-row">
+                      <p><span>Country </span>: Tunisie</p>
+                  </div>
+                  <div class="bio-row">
+                      <p><span>Birthday</span>: 13 juin 2002</p>
+                  </div>
+                  <div class="bio-row">
+                      <p><span>Occupation </span>: UI/UX Designer</p>
+                  </div>
+                  <div class="bio-row">
+                      <p><span>Email </span>: iheb.trabelsi.ai@gmail.com</p>
+                  </div>
+                  <div class="bio-row">
+                      <p><span>Mobile </span>: 24871233</p>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+      <div>
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="panel">
+                      <div class="panel-body">
+                          <div class="bio-chart">
+                          </div>
+                          <div class="bio-desk">
+                              <h4 class="red">Uniteck-Universeal-technology</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="panel">
+                      <div class="panel-body">
+                          <div class="bio-chart">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="panel">
+                      <div class="panel-body">
+                          <div class="bio-chart">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="panel">
+                      <div class="panel-body">
+                          <div class="bio-chart">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+    
+    <div class="shape-img1"><img src="assets/img/shape/1.png" alt="image"></div>
+    <div class="shape-img2"><img src="assets/img/shape/2.svg" alt="image"></div>
+    <div class="shape-img3"><img src="assets/img/shape/3.png" alt="image"></div>
+    <div class="shape-img4"><img src="assets/img/shape/4.svg" alt="image"></div>
+    <div class="shape-img5"><img src="assets/img/shape/5.svg" alt="image"></div>
+    <div class="shape-img6"><img src="assets/img/shape/6.png" alt="image"></div>
+    <div class="dot-shape1"><img src="assets/img/shape/dot1.png" alt="image"></div>
+
+<app-footer></app-footer>

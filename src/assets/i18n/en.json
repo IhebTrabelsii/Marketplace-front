@@ -1,0 +1,106 @@
+
+{
+    "navbar":{
+        "home":"Home",
+        "about":"About Us",
+        "service":"Services",
+        "shop":"Shop",
+        "blog":"Blog",
+        "contact":"Contact us",
+        "card":"card",
+        "User":"User",
+        "Profil":"Profil",
+        "Register":"Register",
+        "Log out":"Log out"
+        
+    },
+   
+    "buttons":{
+      "save" : "Save",
+      "add":"Add to card",
+      "back":"Back to top",
+      "send":"Send Message",
+      "discover":"discover"
+    },
+
+    "home":{
+      "t":"TECHNOLOGY",
+      "d":"DEVELOPMENT",
+      "r":"REVOLUTION",
+      "p":"Indulge in boundless innovation shop now!",
+      "x":"Unlock limitless possibilities with our cutting-edge computers! Dive into a world of productivity, entertainment, and creativity that only our technology can offer. Elevate your experience with blazing speed, stunning graphics, and seamless performance. Join the revolution make your life extraordinary with our irresistible computer deals today!",
+      "z1":"Developement",
+      "z2":"Comfort",
+      "z3":"Security",
+      "z4":"Analyses",
+      "z5":"Developement",
+      "z6":"economy",
+      "title":"We offer your experience with our technology"
+
+    
+    },
+    "footer":{
+      "Link":"Quick Links",
+      "phone":"phone",
+      "pol":"Privacy Policy",
+      "term":"Terms & Conditions",
+      "copy":"Copyright 2019",
+      "all":"All Rights Reserved."
+    },
+
+    "shop":{
+      "Cooler":"Cooler",
+      "Mouse":"Mouse",
+      "Headphone":"Headphone",
+      "Keyboard":"Keyboard",
+      "Mousepad":"Mousepad",
+      "Bag":"Bag",
+      "category":"CATEGORY",
+      "search":"search"
+    },
+    "about":{
+      "meet":"Meet Our Team",
+      "w": "Web Developer-Grafic Designer"
+    },
+
+    "contact":{
+      "msg":"Message Us",
+      "drop":"Drop us Message for any Query",
+      "name":"Full-Name",
+      "phone":"Phone",
+      "email":"Email",
+      "subject":"Subject",
+      "mssg":"Your Message",
+      "con":"Contact us by Phone Number or Email Address",
+      "or":"or"
+    },
+
+    "card":{
+      "name":"Name",
+      "Quantity":"Quantity",
+      "adress":"Address",
+      "email":"Email",
+      "number":"Number",
+      "action":"Actions",
+      "delete":"Delete",
+      "edit":"Edit",
+      "command":"Order",
+      "cancel":"Cancel",
+      "save":"Save"
+    },
+
+    "main_banner": {
+      "paragraph": "Today's e-commerce websites leverage advanced technology to provide personalized assistance, relevant information, and seamless experiences. With machine learning and chatbot integration, they enhance customer interaction, ensuring satisfaction and loyalty.",
+      "title": "UNITECK : Your Digital Shopping Destination",
+      "description": "ML today are able to supply needful of help, information, and positive experience of maintaining intimacy with customers. Eventually, chatbot ideas bring a pleasant experience of all these qualities into the conversation.",
+      "demo_btn": "Schedule a Demo",
+      "get_started_btn": "Get Started Free"
+    }
+    
+
+      
+      
+  }
+  
+    
+    

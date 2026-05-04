@@ -1,0 +1,103 @@
+{
+    "navbar":{
+        "home":"Accueil",
+        "about":"A propos",
+        "service":"Services",
+        "shop":"Boutique",
+        "blog":"Blog",
+        "contact":"Contacte-nous",
+        "card":"carte",
+        "User":"Utilisateur",
+        "Profil":"Profile",
+        "Register":"Enregistrer",
+        "Log out":"Se déconnecter"
+    },
+    
+    "buttons":{
+      "save" : "Enregistrer",
+      "add":"ajouter à la carte",
+      "back":"Retour en haut",
+      "send":"Envoyer un message",
+      "discover":"découvrir"
+
+    },
+
+    "home":{
+      "t":"TECHNOLOGIE",
+      "d":"DEVELOPPEMENT",
+      "r":"RÉVOLUTION",
+      "p":"Offrez-vous dès maintenant une boutique d'innovation illimitée!",
+      "x":"Débloquez des possibilités illimitées avec nos ordinateurs de pointe ! Plongez dans un monde de productivité, de divertissement et de créativité que seule notre technologie peut offrir. Améliorez votre expérience avec une vitesse fulgurante, des graphismes époustouflants et des performances fluides. Rejoignez la révolution et rendez votre vie extraordinaire avec nos offres informatiques irrésistibles dès aujourd'hui !",
+      "z1":"Developpement",
+      "z2":"Confort",
+      "z3":"Sécurité",
+      "z4":"Analyses",
+      "z5":"Developement",
+      "z6":"économie",
+      "title":"Nous offrons votre expérience avec notre technologie"
+    
+    },
+
+    "footer":{
+      "Link":"Liens rapides",
+      "phone":"Telephone",
+      "pol":"politique de confidentialité",
+      "term":"termes et conditions",
+      "copy":"Droits d'auteur 2019",
+      "all":"Tous droits réservés."
+
+
+    },
+
+    "shop":{
+      "Cooler":"Refroidisseur",
+      "Mouse":"Sourie",
+      "Headphone":"Casque gaming",
+      "Keyboard":"Clavier",
+      "Mousepad":"Tapie gaming",
+      "Bag":"Cartable",
+      "category":"CATEGORIE",
+      "search":"recherche"
+
+    },
+    "about":{
+      "meet":"Rencontrez notre équipe",
+      "w":"Développeur-Web-Graphiste"
+    },
+
+    "contact":{
+      "msg":"Envoyez-nous un message",
+      "drop":"Envoyez-nous un message pour toute requête",
+      "name":"Nom & Prenom",
+      "phone":"Téléphone",
+      "email":"Email",
+      "subject":"Sujet",
+      "mssg":"Votre message",
+      "con":"Contactez-nous par numéro de téléphone ou adresse e-mail",
+      "or":"ou"
+    },
+
+    "card":{
+      "name":"Nom",
+      "Quantity":"Quantité",
+      "adress":"Adresse",
+      "email":"Email",
+      "number":"Numéro",
+      "action":"Actions",
+      "delete":"Supprimer",
+      "edit":"Editer",
+      "command":"Commander",
+      "cancel":"Annuler",
+      "save":"Enregistrer"
+    },
+
+
+    "main_banner": {
+      "paragraph": "Les sites de commerce électronique d'aujourd'hui exploitent une technologie avancée pour fournir une assistance personnalisée, des informations pertinentes et des expériences transparentes. Grâce à l'intégration de l'apprentissage automatique et des chatbots, ils améliorent l'interaction avec les clients, garantissant satisfaction et fidélité.",
+      "title": "UNITECK : Votre destination d'achat numérique",
+      "description": "Aujourd'hui, l'IA est capable de fournir une aide indispensable, des informations et une expérience positive en maintenant une intimité avec les clients. Finalement, les idées de chatbot apportent une expérience agréable de toutes ces qualités dans la conversation.",
+      "get_started_btn": "Commencer gratuitement"
+    }
+  
+  }
+  

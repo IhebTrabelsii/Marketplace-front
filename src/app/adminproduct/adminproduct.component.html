@@ -1,0 +1,218 @@
+<app-navadmin></app-navadmin>
+<app-sideadmin></app-sideadmin>
+<body class="home">
+  <div class="container-fluid display-table">
+    <div class="row display-table-row">
+      <div
+        class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box"
+        id="navigation"
+      ></div>
+      <div class="col-md-10 col-sm-11 display-table-cell v-align">
+        <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+
+        <div class="user-dashboard">
+          <h1 style="justify-self: center">Hello gamer</h1>
+          <div class="row">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Sidebar -->
+                <div class="col-md-2"></div>
+                <!-- Main Content -->
+                <div class="col-md-10">
+                  <style>
+                    .styled-table {
+                      margin-top: 50px;
+                      margin-left: -60px;
+                      width: 100%;
+                      border-collapse: collapse;
+                      border-radius: 8px;
+                      overflow: hidden;
+                      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .styled-table thead th {
+                      background-color: #2f2f2f;
+                      color: #fff;
+                      font-weight: bold;
+                      text-align: left;
+                      padding: 12px;
+                      border: 1px solid #dee2e6;
+                    }
+
+                    .styled-table tbody td {
+                      padding: 12px;
+                      border: 1px solid #dee2e6;
+                    }
+
+                    .styled-table tbody td input {
+                      width: 100%;
+                      border: none;
+                      padding: 6px 10px;
+                      border-radius: 4px;
+                      box-sizing: border-box;
+                    }
+
+                    .styled-table tbody td button {
+                      padding: 6px 12px;
+                      border: none;
+                      border-radius: 4px;
+                      background-color: #2f2f2f;
+                      color: #fff;
+                      cursor: pointer;
+                    }
+
+                    .styled-table tbody td button:hover {
+                      background-color: #0d1f55;
+                    }
+
+                    /* Style for alternate rows */
+                    .styled-table tbody tr:nth-child(even) {
+                      background-color: #f8f9fa;
+                    }
+                  </style>
+
+                  <table class="styled-table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Adress</th>
+                        <th>Email</th>
+                        <th>Mobile Number</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let p of productAadmin">
+                        <td>
+                          <input
+                            type="text"
+                            [(ngModel)]="p.name"
+                            [disabled]="!p.editMode"
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            [(ngModel)]="p.price"
+                            [disabled]="!p.editMode"
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            [(ngModel)]="p.address"
+                            [disabled]="!p.editMode"
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="email"
+                            [(ngModel)]="p.email"
+                            [disabled]="!p.editMode"
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="tel"
+                            [(ngModel)]="p.number"
+                            [disabled]="!p.editMode"
+                          />
+                        </td>
+                        <td>
+                          <button (click)="toggleEditMode(p)">Edit</button>
+                        </td>
+                        <td>
+                          <button (click)="toggledropMode(p.id)">Delete</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div *ngFor="let product of productAadmin" class="x">
+                    <div *ngIf="product.editMode" class="edit-form">
+                      <div class="form-group">
+                        <label>Name:</label>
+                        <input
+                          [(ngModel)]="product.name"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label>Email:</label>
+                        <input
+                          [(ngModel)]="product.email"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label>Address:</label>
+                        <input
+                          [(ngModel)]="product.address"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label>Number:</label>
+                        <input
+                          [(ngModel)]="product.number"
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label>Quantity</label>
+                        <input
+                          [(ngModel)]="product.price"
+                          class="form-control"
+                        />
+                      </div>
+
+                      <button
+                        class="edit-button"
+                        (click)="updateuser(product.id)"
+                      >
+                        Edit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="add_project" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header login-header">
+          <button type="button" class="close" data-dismiss="modal"></button>
+          <h4 class="modal-title">Add Project</h4>
+        </div>
+        <div class="modal-body">
+          <input type="text" placeholder="Project Title" name="name" />
+          <input type="text" placeholder="Post of Post" name="mail" />
+          <input type="text" placeholder="Author" name="passsword" />
+          <textarea placeholder="Desicrption"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="cancel" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="add-project" data-dismiss="modal">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  $(document).ready(function () {
+    $('[data-toggle="offcanvas"]').click(function () {
+      $("#navigation").toggleClass("hidden-xs");
+    });
+  });
+</script>

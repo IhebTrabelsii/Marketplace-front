@@ -1,0 +1,193 @@
+<app-navadmin></app-navadmin>
+<app-sideadmin></app-sideadmin>
+<body class="home">
+  <div class="container-fluid display-table">
+    <div class="row display-table-row">
+      <div
+        class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box"
+        id="navigation"
+      >
+        <div class="logo"></div>
+      </div>
+
+      <style>
+        /* Style for the table */
+        .styled-table {
+          margin-top: 150px;
+          margin-left: 150px;
+          width: 80%;
+          border-collapse: collapse;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .styled-table thead th {
+          background-color: #2f2f2f;
+          color: #fff;
+          font-weight: bold;
+          text-align: left;
+          padding: 12px;
+          border: 1px solid #dee2e6;
+        }
+
+        .styled-table tbody td {
+          padding: 12px;
+          border: 1px solid #dee2e6;
+        }
+
+        .styled-table tbody td input {
+          width: 100%;
+          border: none;
+          padding: 6px 10px;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        .styled-table tbody td button {
+          padding: 6px 12px;
+          border: none;
+          border-radius: 4px;
+          background-color: #2f2f2f;
+          color: #fff;
+          cursor: pointer;
+        }
+
+        .styled-table tbody td button:hover {
+          background-color: #2f2f2f;
+        }
+
+        /* Style for alternate rows */
+        .styled-table tbody tr:nth-child(even) {
+          background-color: #f8f9fa;
+        }
+      </style>
+
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>
+              password
+              <button
+                type="button"
+                class="password-toggle"
+                (click)="togglePasswordVisibility()"
+                style="
+                  display: inline-block;
+                  width: calc(40% - 40px);
+                  margin-right: px;
+                "
+              >
+                <i
+                  class="fa"
+                  [ngClass]="{
+                    'fa-eye': !showPassword,
+                    'fa-eye-slash': showPassword
+                  }"
+                ></i>
+              </button>
+            </th>
+            <th>action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>
+              <input
+                type="text"
+                [(ngModel)]="user.fullname"
+                [disabled]="!user.editMode"
+              />
+            </td>
+            <td>
+              <input
+                type="email"
+                [(ngModel)]="user.email"
+                [disabled]="!user.editMode"
+              />
+            </td>
+            <td>
+              <input
+                type="tel"
+                [(ngModel)]="user.mobilenumber"
+                [disabled]="!user.editMode"
+              />
+            </td>
+            <td>
+              <input
+                type="{{ showPassword ? 'text' : 'password' }}"
+                [(ngModel)]="user.password"
+                [disabled]="!user.editMode"
+              />
+            </td>
+            <td>
+              <button (click)="updateuser1(user)">Edit</button>
+            </td>
+            <td>
+              <button (click)="toggleDropMode(user.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngFor="let user of users" class="x">
+        <div *ngIf="user.editMode" class="edit-form">
+          <div class="form-group">
+            <label>Name:</label>
+            <input [(ngModel)]="user.fullname" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label>Email:</label>
+            <input [(ngModel)]="user.email" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label>Number:</label>
+            <input [(ngModel)]="user.mobilenumber" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label>Password:</label>
+            <input [(ngModel)]="user.password" class="form-control" />
+          </div>
+          <button class="edit-button" (click)="updateuser(user.id)">
+            Edit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="add_project" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <input type="text" placeholder="Project Title" name="name" />
+          <input type="text" placeholder="Post of Post" name="mail" />
+          <input type="text" placeholder="Author" name="passsword" />
+          <textarea placeholder="Desicrption"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="cancel" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="add-project" data-dismiss="modal">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  $(document).ready(function () {
+    $('[data-toggle="offcanvas"]').click(function () {
+      $("#navigation").toggleClass("hidden-xs");
+    });
+  });
+</script>
