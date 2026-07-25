@@ -1,0 +1,76 @@
+# 🔧 Marketplace Backend
+
+> ⚠️ **Learning Project** — This backend was built while learning Node.js, Express, and MySQL. It works, but it's not secure or production-ready. Database credentials are hardcoded. Don't deploy this as-is.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| **Runtime** | Node.js |
+| **Framework** | Express |
+| **Database** | MySQL (via `mysql2`) |
+| **Middleware** | `cors`, `body-parser` |
+
+---
+
+## 📡 API Endpoints
+
+### 👤 Users
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/getusers` | Get all users |
+| GET | `/getuserid/:id` | Get user by ID |
+| POST | `/addUser` | Register new user |
+| POST | `/login` | User login (plaintext password) |
+| PUT | `/updateuser/:id` | Update user (old route) |
+| PUT | `/api/user_update/:id` | Update user |
+| DELETE | `/api/user_delete/:id` | Delete user |
+
+### 🛒 Products
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/product` | Get all products (user view) |
+| GET | `/api/products-admin` | Get all products (admin view) |
+| GET | `/api/products-user` | Get products from cart |
+| POST | `/api/add-to-cart` | Add product to cart |
+| POST | `/api/products-admin1` | Add product (admin) |
+| PUT | `/api/products-admin/:id` | Update product (admin) |
+| PUT | `/api/product-update/:id` | Update product |
+| DELETE | `/api/product/:id` | Delete product |
+| DELETE | `/api/product_delete/:id` | Delete product (alternative) |
+| DELETE | `/api/products/:id` | Delete product from admin |
+
+### 📬 Contact
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/getcontact` | Get all contact messages |
+| POST | `/addContact` | Submit contact form |
+| PUT | `/api/contact-update/:id` | Update contact message |
+| DELETE | `/api/contact_delete/:id` | Delete contact message |
+
+---
+
+## ⚠️ Known Issues
+
+- **Hardcoded credentials** — Database password is in the code
+- **Plaintext passwords** — No hashing (e.g., `bcrypt`)
+- **Duplicate routes** — Multiple `PUT` and `DELETE` endpoints for the same resource
+- **No input validation** — Empty fields can cause errors
+- **No environment variables** — Everything is hardcoded
+- **Mixed naming conventions** — `fullname`, `full_name`, `mobilenumber`, `mobile_number`
+- **No error handling middleware** — Crashes could happen
+- **No CORS restrictions** — Accepts requests from anywhere
+- **No rate limiting** — Vulnerable to abuse
+
+---
+
+## 🚀 How to Run
+
+### 1. Install Dependencies
+```bash
+npm install
